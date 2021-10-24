@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "portfolio"
-AuthUserFile "yama36/portfolio1/.htpasswd"
-require valid-user
