@@ -426,7 +426,7 @@ button {
 
         .blog {
           &__img {
-            background-image: url(../../img/blog-img#{$i}.png);
+            background-image: url(../img/blog-img#{$i}.png);
             background-size: cover;
             max-width: 389px;
             max-height: 260px;
