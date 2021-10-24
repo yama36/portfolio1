@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "portfolio"
+AuthUserFile "home/yama36/.htpasswd"
+require valid-user
