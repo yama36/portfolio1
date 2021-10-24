@@ -1,0 +1,301 @@
+/******************************************************************
+
+Stylesheet: 600px以下のタブレットやモニタで適用
+
+******************************************************************/
+
+
+// ハンバーガーメニューの設定
+.hb {
+  &__menu {
+    display: block;
+    transition: all .5s;
+    transform: translateY(-300px);
+    z-index: 10;
+    top: 94px;
+    left: 0;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+
+    & li {
+      margin-bottom: 50px;
+
+      &:nth-child(1) {
+        margin-top: 50px;
+      }
+
+      a {
+        border-bottom: solid 1px rgb(182, 182, 182);
+        font-size: 18px;
+      }
+    }
+
+    &.inview {
+      transform: translateY(0);
+      transition: all .5s;
+    }
+  }
+
+  &__back {
+    transition: all .5s;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    left: 0;
+
+    &.inview {
+      opacity: .8;
+      pointer-events: auto;
+    }
+  }
+}
+  // スクロール禁止
+  .hidden {
+    overflow: hidden;
+  }
+
+#header {
+  .header__list {
+    display: none;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  .hb {
+    display: block;
+
+    &__btn {
+      display: flex;
+      flex-direction: column;
+      margin: 24px;
+      cursor: pointer;
+
+      span {
+        width: 30px;
+        height: 3px;
+        background-color: black;
+        margin-bottom: 7.5px;
+        transition: all .5s;
+        transform-origin: left;
+
+        &:last-of-type {
+          margin: 0;
+        }
+      }
+
+      &.inview {
+        span {
+          &:nth-child(1) {
+            transform-origin: left;
+            transform: rotate(45deg);
+          }
+
+          &:nth-child(2) {
+            opacity: 0;
+          }
+
+          &:nth-child(3) {
+            transform-origin: left;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+#top {
+  width: 90vw;
+  margin: 0 auto;
+
+  .top__text {
+    margin-right: 0;
+
+    h2 {
+      width: 100%;
+    }
+
+    p {
+      margin-bottom: 40px;
+    }
+  }
+
+  a {
+    display: block;
+    text-align: center;
+  }
+
+  img {
+    margin: 0 auto;
+    margin-top: 40px;
+    position: relative;
+  }
+}
+
+#feature {
+  .feature {
+    &__container {
+      flex-direction: column;
+    }
+
+    &__text {
+      margin: 20px 0 0 !important;
+    }
+
+    &__list {
+      & li:nth-child(even) {
+        & .feature__container {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+#price {
+  dl {
+    display: flex;
+    flex-direction: column;
+    background-color: #EEFBFB;
+    box-shadow: none;
+
+    &:last-of-type {
+      dt {
+        border-bottom: solid 1px #E5E5E5;
+      }
+    }
+
+    dt {
+      background-color: $cWhite;
+      border-right: none;
+      padding: 10px 20px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    dd {
+      background-color: $cWhite;
+      border-bottom: solid 1px #E5E5E5;
+      padding: 20px 20px;
+      margin-bottom: 10px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+
+}
+
+#faq {
+  .accordion__title {
+    padding: 22px 10px;
+  }
+}
+
+#blog {
+  .blog__container {
+    & ul {
+      & li {
+        margin: 0 0 30px;
+        display: flex;
+        flex-direction: column;
+
+        .container {
+          height: auto;
+        }
+
+        .blog__time {
+          margin: 10px;
+        }
+
+        .blog__img {
+          max-width: none;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+}
+
+#works {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+#contact {
+  form {
+    background-color: $cWhite;
+    padding: 40px 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+    #name,
+    #email,
+    #message,
+    textarea {
+      background-color: #EEFBFB;
+      display: block;
+      border-radius: 3px;
+      height: 42px;
+      width: 500px;
+      resize: none;
+      max-width: 100%;
+    }
+
+    #message {
+      width: 100%;
+      height: 180px;
+    }
+
+    div {
+      margin-bottom: 32px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 42px;
+
+      &::after {
+        content: "必須";
+        font-size: 14px;
+        text-align: center;
+        margin: 0 24px;
+        padding: 8px 16px;
+        color: #FFF;
+        background-color: #0C449B;
+        border-radius: 10px;
+      }
+    }
+
+    .check {
+      display: flex;
+      justify-content: center;
+    }
+
+    #check {
+      position: relative;
+      margin-right: 10px;
+      width: 20px;
+      height: 20px;
+    }
+
+    p {
+      color: #000000;
+      margin: 0;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+/******************************************************************
+
+Stylesheet: 900px以下のモニタで適用
+
+******************************************************************/
+
+button {
+  font-size: 12px;
+  width: 100px;
+}
+
+.font-sm {
+  font-size: 12px;
+}
+.font-md {
+  font-size: 14px;
+}
+.font-mm {
+  font-size: 16px;
+}
+.font-lr {
+  font-size: 24px;
+}
+.font-lg {
+  font-size: 28px;
+}
+
+#header {
+  .title {
+    h1 {
+      font-size: 20px;
+    }
+  }
+
+  nav {
+    .header__list {
+        & .header__item {
+          margin-right: 30px;
+          font-size: 14px;
+        }
+    }
+  }
+}
+
+#top {
+  width: 80%;
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 100px;
+
+  img {
+    position: absolute;
+    width: 300px;
+    right: 0;
+    bottom: 0;
+    z-index: -5;
+  }
+}
+
+#feature {
+  h2 {
+    margin-bottom: 50px;
+  }
+
+
+  img {
+    width: 250px;
+  }
+
+  .feature {
+    &__container {
+      justify-content: center;
+    }
+
+    &__text {
+      h4 {
+        margin-bottom: 30px;
+      }
+
+      p {
+        width: 100%;
+        max-width: 350px;
+      }
+    }
+  }
+}
+
+#price {
+  dl {
+    dt,
+    dd {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+#blog {
+  .blog__container {
+    & ul {
+      margin: 0 auto;
+      flex-direction: column;
+
+      & li {
+        margin: 0 0 30px;
+        display: flex;
+        flex-direction: row;
+
+        .container {
+          width: 100%;
+          height: 260px;
+          align-items: center;
+        }
+
+        .blog__text {
+          padding: 30px;
+        }
+
+        .blog__time {
+          position: static;
+          margin-top: 10px;
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+#works {
+  margin-right: 0;
+  margin-left: 0;
+  width: 100%;
+}
