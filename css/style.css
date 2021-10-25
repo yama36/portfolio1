@@ -646,6 +646,7 @@ button {
 #top .top__text p {
   margin-bottom: 50px;
   max-width: 255px;
+  line-height: 1.2em;
 }
 
 #top img {
